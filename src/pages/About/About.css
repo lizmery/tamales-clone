@@ -1,0 +1,270 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.grid {
+    display: grid;
+}
+
+section {
+    padding-block: 8rem;
+}
+
+.about {
+    padding-top: 10rem;
+    min-height: 100vh;
+    background: var(--lightestBrown);
+}
+
+/* MISSION START */
+.mission {
+    gap: 4rem;
+    padding: 0 2rem;
+    margin-bottom: 4rem;
+}
+
+.img-group {
+    grid-template-columns: 2rem repeat(2, 1fr) 2rem repeat(2, 1fr) 2rem;
+}
+
+.img-box {
+    min-height: 20rem;
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, .2));
+    overflow: hidden;
+}
+
+.img-box img {
+    object-fit: contain;
+    transition: transform .5s;
+}
+
+.img-box:hover img {
+    transform: scale(1.1);
+}
+
+.img-left {
+    grid-column: 1/4;
+    grid-row: 1/span 10;
+    z-index: 5;
+}
+
+.img-center {
+    grid-column: 3/6;
+    grid-row: 7/span 10;
+    z-index: 2;
+}
+
+.img-right {
+    grid-column: 5/-1;
+    grid-row: 3/span 10;
+}
+
+.heading {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    color: var(--green);
+}
+
+.mission .subheading {
+    margin-top: 4rem;
+}
+
+.subheading {
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: var(--darkBrown);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.statement {
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+    .about {
+        margin-top: 6rem;
+    }
+    .mission {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .heading {
+        font-size: 3.6rem;
+    }
+    .img-box {
+        min-height: 30rem;
+    }
+    .statement {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .about {
+        padding-top: 6rem;
+    }
+    .mission {
+        padding: 0 5%;
+        padding-top: 3rem;
+        gap: 12rem;
+    }
+    .heading {
+        font-size: 8rem;
+    }
+    .img-box {
+        min-height: 35rem;
+    }
+    .img-box img {
+        margin: 0;
+    }
+    .img-left {
+        grid-row: 1/span 8;
+    }
+    
+    .img-center {
+        grid-row: 6/span 8;
+    }
+    
+    .img-right {
+        grid-row: 3/span 8;
+    }
+    .statement {
+        font-size: 2rem;
+    }
+}
+/* MISSION END */
+
+/* TESTIMONIALS START */
+.testimonials {
+    width: 100%;
+    background: #D7CFBC;
+}
+
+.testimonials .heading,
+.gallery .heading,
+.testimonials .subheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials-slider {
+    margin-top: 4rem;
+    min-height: 400px;
+    padding: 0;
+}
+
+@media screen and (min-width: 1080px) {
+    .testimonials-slider {
+        margin: 7rem 5rem;
+    }
+}
+
+.client-img {
+    width: 200px;
+    height: 200px;
+}
+
+@media screen and (min-width: 1080px) {
+    .client-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.arrow {
+    font-size: 6rem;
+    color: var(--darkBrown);
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    transition: .3s ease;
+}
+
+.arrow:hover {
+    transform: scale(1.1);
+}
+
+.next {
+    right: 0%;
+    top: 50%;
+}
+
+.prev {
+    left: 0%;
+    top: 50%;
+}
+
+.testimonials .slide img {
+    width: 20rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 .75rem rgba(0, 0, 0, .3));
+    border: 1px solid #fff;
+}
+
+.slide {
+    transform: scale(.2);
+    transition: transform 300ms;
+    opacity: .5;
+    padding: 2rem;
+}
+
+.activeSlide {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.client-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.client-name {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: var(--darkGreen);
+}
+
+.client-review {
+    font-size: 1.4rem;
+}
+
+.accent-text {
+    font-size: 1.8rem;
+    font-weight: 800;
+    padding: .5rem;
+}
+/* TESTIMONIALS END */
+
+/* GALLERY START */
+.gallery-container {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+@media screen and (min-width: 990px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    }
+}
+
+.gallery-item img {
+    min-height: 350px;
+    object-fit: cover;
+    filter: grayscale(.3);
+}
+
+.gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* GALLERY END */
