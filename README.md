@@ -15,7 +15,7 @@ A mock website that sells tamales. [View Live](https://tamales-clone.herokuapp.c
 
 ## Screenshots
 ### Home Page
-![Screen Shot 2022-02-16 at 8 59 59 PM](https://user-images.githubusercontent.com/78451440/154408858-49676793-d5ee-40a8-8ede-4c66c304ef73.png)
+![screencapture-localhost-3000-2022-02-17-13_16_28](https://user-images.githubusercontent.com/78451440/154572461-e9d87120-7bce-482d-bf83-8a600b3cdba8.png)
 
 ### About Page
 ![screencapture-localhost-3002-about-2022-02-16-20_53_58](https://user-images.githubusercontent.com/78451440/154408367-1699366c-63c9-4304-b353-ff37eb541b2a.png)
