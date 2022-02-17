@@ -1,4 +1,4 @@
-# Tamales Shop
+# Tamales Shop (v.2)
 
 A mock website that sells tamales. [View Live](https://tamales-clone.herokuapp.com/).
 
