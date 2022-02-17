@@ -7,22 +7,46 @@ import './Footer.css'
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="footer-content">
-                <NavLink exact to="/" className="footer-logo">
-                    <img src={molcajete} alt="molcajete" className="" />
-                </NavLink>
-                <ul className="social-media">
-                    <li>
-                        <TiSocialInstagram />
-                    </li>
-                    <li>
-                        <TiSocialFacebook />
-                    </li>
-                    <li>
-                        <TiSocialTwitter />
-                    </li>
-                </ul>
-            </div>
+            <NavLink exact to="/" className="footer-logo">
+                <img src={molcajete} alt="molcajete" className="" />
+            </NavLink>
+            <ul className="footer-items">
+                <li className="footer-item">
+                    <NavLink
+                        exact
+                        to="/"
+                    >
+                        Home
+                    </NavLink>
+                </li>
+                <li className="footer-item">
+                    <NavLink
+                        exact
+                        to="/about"
+                    >
+                        About
+                    </NavLink>
+                </li>  
+                <li className="footer-item">
+                    <NavLink
+                        exact
+                        to="/menu"
+                    >
+                        Menu
+                    </NavLink>
+                </li>  
+            </ul>
+            <ul className="social-media">
+                <li>
+                    <TiSocialInstagram />
+                </li>
+                <li>
+                    <TiSocialFacebook />
+                </li>
+                <li>
+                    <TiSocialTwitter />
+                </li>
+            </ul>
             <hr className="line" />
             <p className="copyright">&copy;2022 Lizmery Vigil</p>
         </footer>
