@@ -26,7 +26,7 @@ const App = () => {
             element={<Menu />}
           />
         </Routes>
-        
+        <Footer />
       </Router>
     </>
   )
