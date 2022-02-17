@@ -82,3 +82,96 @@
 .home-btn:hover {
     transform: scale(1.05);
 }
+
+/* OVERVIEW START */
+.overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--lightestBrown);
+    min-height: 50vh;
+    padding: 4rem 2rem;
+    gap: 4rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .overview {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .overview {
+        padding: 4rem 5%;
+    }
+}
+
+.item {
+    height: 400px;
+    width: 400px;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease;
+    position: relative;
+}
+
+.item:hover .overlay {
+    background: rgba(111, 94, 82, .9);
+    backdrop-filter: blur(5px);
+}
+
+.item:hover .overview-btn {
+    display: block;
+}
+
+.item:hover .item-heading {
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transition: .5s ease;
+    background: rgba(111, 94, 82, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overview-about {
+    background: url(../../assets/peppers2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.overview-menu {
+    background: url(../../assets/tamales4.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.overview-other {
+    background: url(../../assets/cornfield.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.item-heading {
+    font-size: 5rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.overview-btn {
+    display: none;
+    background: var(--accentColor);
+}
