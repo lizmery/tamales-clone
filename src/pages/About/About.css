@@ -90,7 +90,7 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
     .heading {
-        font-size: 3.6rem;
+        font-size: 7rem;
     }
     .img-box {
         min-height: 30rem;
@@ -247,7 +247,7 @@ section {
 /* GALLERY START */
 .gallery-container {
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 }
 
 @media screen and (min-width: 990px) {
@@ -268,3 +268,109 @@ section {
     align-items: center;
 }
 /* GALLERY END */
+
+/*  QUOTE START */
+.contact {
+    min-height: calc(100vh - 9rem);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (min-width: 1080px) {
+    .contact {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.contact-img {
+    flex-basis: 50%;
+}
+
+.contact-img img {
+    object-fit: cover;
+    max-height: 300px;
+    width: 100vw;
+}
+
+@media screen and (min-width: 1080px) {
+    .contact-img img {
+        min-height: calc(100vh  - 9rem);
+        width: initial;
+        max-height: initial;
+    }
+}
+
+.contact form {
+    flex: 1 1 40rem;
+    padding: 4rem;
+    background: var(--lightestBrown);
+    margin: auto 2rem;
+}
+
+@media screen and (min-width: 1080px) {
+    .contact form {
+        margin: auto 5%;
+    }
+}
+
+.contact form .inputBox {
+    position: relative;
+}
+
+.inputBox input,
+.inputBox textarea {
+    width: 100%;
+    background: none;
+    margin: 1.5rem 0;
+    padding: .5rem 0;
+    font-size: 1.7rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: .1rem solid rgba(111, 94, 83, .5);
+    outline: none;
+}
+
+.inputBox textarea {
+    resize: none;
+    height: 13rem;
+}
+
+.inputBox label {
+    position: absolute;
+    top: 1.7rem;
+    left: 0;
+    font-size: 1.8rem;
+    transition: .2s linear;
+}
+
+.inputBox input:focus ~ label,
+.inputBox input:valid ~ label,
+.inputBox textarea:focus ~ label {
+    top: -.5rem;
+    font-size: 1.5rem;
+    color: var(--accentColor);
+}
+
+.contact-btn {
+    border: none;
+    cursor: pointer;
+    background: var(--accentColor);
+    padding: 1.5rem 2rem;
+    color: #fff;
+    font-size: 16px;
+    transition: all .3s ease-in-out;
+    display: block;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.contact-btn:hover {
+    transform: scale(1.05);
+}
+
+

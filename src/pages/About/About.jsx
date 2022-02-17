@@ -4,6 +4,7 @@ import Testimonials from './sections/Testimonials';
 import Gallery from './sections/Gallery';
 
 import './About.css';
+import Contact from './sections/Contact';
 
 const About = () => {
     
@@ -11,7 +12,8 @@ const About = () => {
         <div className="about">
             <Mission />
             <Testimonials />
-            <Gallery />
+            <Contact />
+           {/* <Gallery /> */}
         </div>
     )
 }
