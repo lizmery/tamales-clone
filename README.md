@@ -20,8 +20,8 @@ A mock website that sells tamales. [View Live](https://tamales-clone.herokuapp.c
 ### About Page
 ![screencapture-localhost-3002-about-2022-02-16-20_53_58](https://user-images.githubusercontent.com/78451440/154408367-1699366c-63c9-4304-b353-ff37eb541b2a.png)
 
-## Menu Page
-#![screencapture-localhost-3002-menu-2022-02-16-20_55_30](https://user-images.githubusercontent.com/78451440/154408947-66697060-f473-4dfe-b285-6e0e291f3edf.png)
+### Menu Page
+![screencapture-localhost-3002-menu-2022-02-16-20_55_30](https://user-images.githubusercontent.com/78451440/154408947-66697060-f473-4dfe-b285-6e0e291f3edf.png)
 
 ## Future Implementations
 - E-commerce features
