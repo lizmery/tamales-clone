@@ -28,3 +28,4 @@ A mock website that sells tamales. [View Live](https://tamales-clone.herokuapp.c
 - Animations
 - Drop down menu (navbar)
 - Embedded google maps
+- Spanish translation
