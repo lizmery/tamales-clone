@@ -333,6 +333,7 @@ section {
     border-right: none;
     border-bottom: .1rem solid rgba(111, 94, 83, .5);
     outline: none;
+    color: var(--darkGreen);
 }
 
 .inputBox textarea {
