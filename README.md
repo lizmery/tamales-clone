@@ -5,7 +5,7 @@ A mock website that sells tamales. [View Live](https://tamales-clone.herokuapp.c
 ## Technologies Used
 - ReactJS
 - React Slick
-- -CSS3
+- CSS3
 
 ## Features
 - Mobile-first approach
@@ -27,3 +27,4 @@ A mock website that sells tamales. [View Live](https://tamales-clone.herokuapp.c
 - E-commerce features
 - Animations
 - Drop down menu (navbar)
+- Embedded google maps
