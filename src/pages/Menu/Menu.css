@@ -26,7 +26,7 @@
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 8rem;
+    gap: 4rem;
     width: 70%;  
 }
 
@@ -34,6 +34,7 @@
     .menu-grid {
         width: 90%;
         grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+        gap: 6rem;
     }
 }
 
@@ -41,6 +42,7 @@
     .menu-grid {
         width: 100%;
         grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+        gap: 8rem;
     }
 }
 
