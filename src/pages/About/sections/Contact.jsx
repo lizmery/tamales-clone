@@ -3,7 +3,7 @@ import tamales from '../../../assets/tamales4.jpeg'
 
 const Quote = () => {
     return (
-        <div className="contact">
+        <div className="contact" id="contact">
             <div className="contact-img">
                 <img src={tamales} alt="tamales" />
             </div>

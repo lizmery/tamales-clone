@@ -6,7 +6,7 @@ import cactus from '../../../assets/cactus-red.jpg';
 
 const Mission = () => {
     return (
-        <section className="mission grid">
+        <section className="mission grid" id="mission">
             <div className="mission-content order-2">
                 <h6 className="subheading">Who we are</h6>
                 <h1 className="mission-heading heading">About Us</h1>

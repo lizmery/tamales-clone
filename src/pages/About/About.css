@@ -20,6 +20,7 @@ section {
     gap: 4rem;
     padding: 0 2rem;
     margin-bottom: 4rem;
+    min-height: calc(100vh - 9rem);
 }
 
 .img-group {
@@ -269,7 +270,7 @@ section {
 }
 /* GALLERY END */
 
-/*  QUOTE START */
+/*  CONTACT START */
 .contact {
     min-height: calc(100vh - 9rem);
     display: flex;
@@ -279,7 +280,7 @@ section {
     text-align: center;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 960px) {
     .contact {
         flex-direction: row;
         text-align: left;
@@ -296,7 +297,7 @@ section {
     width: 100vw;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 960px) {
     .contact-img img {
         min-height: calc(100vh  - 9rem);
         width: initial;
@@ -368,10 +369,10 @@ section {
     display: block;
     width: 100%;
     margin-top: 3rem;
+    border-radius: 0;
 }
 
 .contact-btn:hover {
     transform: scale(1.05);
 }
-
-
+/* CONTACT END */
