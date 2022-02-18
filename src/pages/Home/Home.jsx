@@ -8,7 +8,7 @@ import Overview from './Overview'
 const Home = () => {
     const NextArrow = ({ onClick }) => {
         return (
-            <div className="arrow next" onClick={onClick}>
+            <div className="home-arrow next" onClick={onClick}>
                 <RiArrowRightSFill />
             </div>
         );
@@ -16,7 +16,7 @@ const Home = () => {
 
     const PrevArrow = ({ onClick }) => {
         return (
-            <div className="arrow prev" onClick={onClick}>
+            <div className="home-arrow prev" onClick={onClick}>
                 <RiArrowLeftSFill />
             </div>
         );
