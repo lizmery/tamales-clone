@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
+import { BiChevronDown } from 'react-icons/bi'
 import molcajete from '../../assets/molcajete6.png'
 import './Navbar.css';
 
@@ -48,7 +49,7 @@ const Navbar = () => {
                                 className="nav-link"
                                 onClick={() => setClick(false)}
                             >
-                                About
+                                About <BiChevronDown />
                             </NavLink>
                         </li>
                         <li className="nav-item">
