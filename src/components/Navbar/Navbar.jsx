@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
+import { BsCart2 } from 'react-icons/bs'
 import { BiChevronDown } from 'react-icons/bi'
 import molcajete from '../../assets/molcajete6.png'
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ totalItems }) => {
     const [click, setClick] = useState(false);
     const [scroll, setScroll] = useState(false);
 
@@ -78,14 +79,18 @@ const Navbar = () => {
                 <NavLink exact to="/" className="nav-logo">
                     <img src={molcajete} alt="molcajete" className="" />
                 </NavLink>
-                <button className="nav-btn">
+                <span className="cart-badge">
                     <Link
                         exact
-                        to="/menu"
+                        to="/cart"
+                        aria-label="Show cart items"
                     >
-                        Order Now
+                        <BsCart2 
+                            className={scroll || click ? "cart-btn" : "cart-btn transparent"}
+                        />
                     </Link>
-                </button> 
+                    {totalItems}
+                </span>
                 <div className="nav-icon" onClick={handleClick}>
                     {click ? <RiCloseLine /> : <RiMenu3Line />}
                 </div>

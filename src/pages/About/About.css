@@ -10,7 +10,7 @@ section {
 }
 
 .about {
-    padding-top: 10rem;
+    padding-top: 8rem;
     min-height: 100vh;
     background: var(--lightestBrown);
 }
@@ -18,7 +18,7 @@ section {
 /* MISSION START */
 .mission {
     gap: 4rem;
-    padding: 0 2rem;
+    padding: 0 1rem;
     margin-bottom: 4rem;
     min-height: calc(100vh - 9rem);
 }
@@ -66,7 +66,7 @@ section {
 }
 
 .mission .subheading {
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .subheading {
