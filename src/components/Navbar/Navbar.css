@@ -161,7 +161,22 @@
 .nav-logo {
     height: 6rem;
     width: 6rem;
-    margin-right: 9rem;
+    margin-right: 18rem;
+}
+
+.cart-btn {
+    color: var(--darkGreen);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.cart-btn:hover {
+    transform: scale(1.1);
+}
+
+.transparent .cart-btn {
+    color: var(--lightBrown);
 }
 
 @media screen and (min-width: 1080px){
