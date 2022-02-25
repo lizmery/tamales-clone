@@ -5,11 +5,10 @@ import Button from '../Button'
 import './Cart.css'
 
 const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart }) => {
-
     const EmptyCart = () => (
         <span className="empty">
             You have no items in your shopping cart,
-            <Link to ='/menu' className='empty-link'>start adding some</Link>!
+            <Link to ='/menu' className='empty-link'> start adding some</Link>!
         </span>
     )
 
@@ -29,14 +28,14 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
             <div className="checkout">
                 <h4 className="subtotal">Subtotal: {cart.subtotal.formatted_with_symbol}</h4>
                 <div className="checkout-btns">
-                    <Link to="/"><Button name="Empty Cart" secondary={true} onClick={handleEmptyCart} /></Link>
-                    <Link to="/"><Button name="Checkout" /></Link>
+                    <Button name="Empty Cart" secondary={true} onClick={handleEmptyCart} />
+                    <Button name="Checkout" />
                 </div>
             </div>
         </>
     )
 
-    if(!cart.line_items) return 'Loading...'
+    if(!cart.line_items) return <p className="loading">Loading...</p>
 
     return (
         <section className="cart-container">
