@@ -245,31 +245,6 @@ section {
 }
 /* TESTIMONIALS END */
 
-/* GALLERY START */
-.gallery-container {
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-}
-
-@media screen and (min-width: 990px) {
-    .gallery-container {
-        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-    }
-}
-
-.gallery-item img {
-    min-height: 350px;
-    object-fit: cover;
-    filter: grayscale(.3);
-}
-
-.gallery-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* GALLERY END */
-
 /*  CONTACT START */
 .contact {
     min-height: calc(100vh - 9rem);
