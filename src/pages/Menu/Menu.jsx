@@ -5,6 +5,8 @@ import './Menu.css'
 
 
 const Menu = ({ products, onAddToCart}) => {
+    if (!products.length) return <p className="loading">Loading...</p>
+    
     return (
         <div className="menu-container">
             <h6 className="subheading">What we offer</h6>
