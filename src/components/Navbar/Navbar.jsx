@@ -28,6 +28,9 @@ const Navbar = ({ totalItems }) => {
     return (
         <header className={click ? "header active" : "header"}>
             <nav className={scroll || click ? "nav container" : "nav container transparent"}>
+                <NavLink exact to="/" className="nav-logo">
+                        <img src={molcajete} alt="molcajete" className="" />
+                </NavLink>
                 {/* Icon made by Freepik from flaticon.com */}
                 <div className={click ? "nav-menu active" : "nav-menu"}>
                     <ul className="nav-list">
@@ -76,10 +79,7 @@ const Navbar = ({ totalItems }) => {
                         </button> : null 
                     }
                 </div>
-                <NavLink exact to="/" className="nav-logo">
-                    <img src={molcajete} alt="molcajete" className="" />
-                </NavLink>
-                <span className="cart-badge">
+                <div className="cart-icon">
                     <Link
                         exact
                         to="/cart"
@@ -89,8 +89,13 @@ const Navbar = ({ totalItems }) => {
                             className={scroll || click ? "cart-btn" : "cart-btn transparent"}
                         />
                     </Link>
-                    {totalItems}
-                </span>
+                    {totalItems > 0 ? 
+                        <span className="cart-badge">
+                            {totalItems}
+                        </span> : null
+                    }
+                    
+                </div>
                 <div className="nav-icon" onClick={handleClick}>
                     {click ? <RiCloseLine /> : <RiMenu3Line />}
                 </div>

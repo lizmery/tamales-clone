@@ -46,6 +46,8 @@
 .nav-list {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -161,7 +163,7 @@
 .nav-logo {
     height: 6rem;
     width: 6rem;
-    margin-right: 18rem;
+    
 }
 
 .cart-btn {
@@ -177,6 +179,20 @@
 
 .transparent .cart-btn {
     color: var(--lightBrown);
+}
+
+.cart-badge {
+    background: var(--accentColor);
+    border-radius: 50%;
+    padding: .8rem 1.2rem;
+    position: absolute;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: .3s ease;
+}
+
+.transparent .cart-badge {
+    background: var(--lightBrown);
 }
 
 @media screen and (min-width: 1080px){
@@ -210,6 +226,10 @@
     }
     .nav-item:last-child {
         padding-right: 0;
+    }
+    .cart-badge {
+        top: 1rem;
+        right: 5.5rem;
     }
 }
 
