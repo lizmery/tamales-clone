@@ -6,8 +6,9 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Menu from './pages/Menu/Menu';
 import Footer from './components/Footer/Footer';
-import './App.css'
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout'
+import './App.css'
 
 const App = () => {
   const [products, setProducts] = useState([])
@@ -82,6 +83,11 @@ const App = () => {
                 handleEmptyCart={handleEmptyCart} 
               />
             }
+          />
+          <Route
+            exact
+            path="/checkout"
+            element={<Checkout cart={cart} />}
           />
         </Routes>
         <Footer />
