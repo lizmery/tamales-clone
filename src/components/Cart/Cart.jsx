@@ -8,7 +8,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
     const EmptyCart = () => (
         <span className="empty">
             You have no items in your shopping cart,
-            <Link to ='/menu' className='empty-link'> start adding some</Link>!
+            <Link to='/menu' className='empty-link'> start adding some</Link>!
         </span>
     )
 
@@ -16,7 +16,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
         <>
             <div className="cart-grid">
                 {cart.line_items.map((item) => (
-                    <div className="cart-item" key={item.id}>
+                    <div className="" key={item.id}>
                         <CartItem
                             item={item}
                             onUpdateCartQty={handleUpdateCartQty}
@@ -25,11 +25,11 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
                     </div>
                 ))}
             </div>
-            <div className="checkout">
+            <div className="">
                 <h4 className="subtotal">Subtotal: {cart.subtotal.formatted_with_symbol}</h4>
                 <div className="checkout-btns">
                     <Button name="Empty Cart" secondary={true} onClick={handleEmptyCart} />
-                    <Button name="Checkout" />
+                    <Link to='/checkout'><Button name="Checkout" /></Link>
                 </div>
             </div>
         </>

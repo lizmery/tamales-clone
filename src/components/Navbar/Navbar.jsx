@@ -94,7 +94,6 @@ const Navbar = ({ totalItems }) => {
                             {totalItems}
                         </span> : null
                     }
-                    
                 </div>
                 <div className="nav-icon" onClick={handleClick}>
                     {click ? <RiCloseLine /> : <RiMenu3Line />}
