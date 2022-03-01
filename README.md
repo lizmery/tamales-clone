@@ -1,17 +1,21 @@
-# Tamales Shop (v.2)
+# Tamales Shop (v.2) - *In Progress*
 
-A mock website that sells tamales. [View Live](https://tamales-clone.herokuapp.com/).
+A mock e-commerce website that sells tamales. [View Live](https://tamales-clone.herokuapp.com/).
 
 ## Technologies Used
 - ReactJS
 - React Slick
 - CSS3
+- CommerceJS
 
 ## Features
 - Mobile-first approach
 - React Slick's carousel
-- CSS Grid
-- Responsive Design
+- CSS grid
+- Responsive design
+- Shopping cart
+- Checkout page
+- Payment processing handled by Stripe
 
 ## Screenshots
 ### Home Page
@@ -23,7 +27,7 @@ A mock website that sells tamales. [View Live](https://tamales-clone.herokuapp.c
 ### Menu Page
 ![screencapture-localhost-3002-menu-2022-02-16-20_55_30](https://user-images.githubusercontent.com/78451440/154408947-66697060-f473-4dfe-b285-6e0e291f3edf.png)
 
-## Future Implementations
+## *Currently Working On*
 - E-commerce features
 - Animations
 - Drop down menu (navbar)
