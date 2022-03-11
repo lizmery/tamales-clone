@@ -351,3 +351,12 @@ section {
     transform: scale(1.05);
 }
 /* CONTACT END */
+
+.custom-shape-divider-top-1646805452 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}

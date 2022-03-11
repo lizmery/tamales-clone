@@ -5,7 +5,7 @@ const Quote = () => {
     return (
         <div className="contact" id="contact">
             <div className="contact-img">
-                <img src={tamales} alt="tamales" />
+                <img src={tamales} alt="tamales" loading="lazy" />
             </div>
             <form>
                 <h6 className="subheading">Get in touch</h6>

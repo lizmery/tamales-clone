@@ -54,7 +54,7 @@ const Testimonials = () => {
                 <Slider {...settings}>
                     {clients.map((client, index) => (
                         <div className={index === clientIndex ? "slide activeSlide" : "slide"}>
-                            <img src={client.img} alt={client.img} className='client-img' />
+                            <img src={client.img} alt={client.img} className='client-img' loading="lazy" />
                             <div className="client-content">
                                 <p className="client-review">
                                     <span className="accent-text">"</span>{client.review}<span className="accent-text">"</span>

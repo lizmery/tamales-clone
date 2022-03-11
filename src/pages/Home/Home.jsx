@@ -43,7 +43,7 @@ const Home = () => {
                         <h1>Authentic Tamales</h1>
                         <h6>A taste of Oaxaca, made with the utmost care</h6>
                         <div className="home-btns">
-                            <Link to="/about"><Button name="Learn More" secondary={true} /></Link>
+                            <Link to="/about"><Button name="Learn More" secondary /></Link>
                             <Link to="/menu"><Button name="Order Now" /></Link>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ const Home = () => {
                         <h1>Second Title</h1>
                         <h6>Optio possimus omnis ad expedita dolore consequatur quo aut voluptas.</h6>
                         <div className="home-btns">
-                            <Link to="/about"><Button name="Learn More" secondary={true} /></Link>
+                            <Link to="/about"><Button name="Learn More" secondary /></Link>
                             <Link to="/menu"><Button name="Order Now" /></Link>
                         </div>
                     </div>
@@ -63,7 +63,7 @@ const Home = () => {
                         <h1>The Third Title</h1>
                         <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit!</h6>
                         <div className="home-btns">
-                            <Link to="/about"><Button name="Learn More" secondary={true} /></Link>
+                            <Link to="/about"><Button name="Learn More" secondary /></Link>
                             <Link to="/menu"><Button name="Order Now" /></Link>
                         </div>
                     </div>

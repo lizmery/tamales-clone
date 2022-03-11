@@ -24,13 +24,13 @@ const Mission = () => {
             </div>
             <div className="img-group order-1 grid">
                 <div className="img-box img-left">
-                    <img src={peppers} alt="peppers" className="" />
+                    <img src={peppers} alt="peppers" loading="lazy" />
                 </div>
                 <div className="img-box img-center">
-                    <img src={cactus} alt="cactus" className="" />   
+                    <img src={cactus} alt="cactus" loading="lazy" />   
                 </div>
                 <div className="img-box img-right">
-                    <img src={cornfield} alt="corn field" className="" />
+                    <img src={cornfield} alt="corn field" loading="lazy" />
                 </div>
             </div>
         </section>
