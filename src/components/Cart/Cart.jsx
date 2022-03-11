@@ -39,7 +39,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
 
     return (
         <section className="cart-container">
-            <h3 className="heading">Your Shopping Cart</h3>
+            <h3 className="heading">Your Cart</h3>
             {!cart.line_items.length ? <EmptyCart /> : <FilledCart />}
         </section>
     )

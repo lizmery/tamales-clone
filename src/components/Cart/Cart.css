@@ -3,8 +3,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
     padding: 10rem 2rem;
     min-height: 100vh;
 }
@@ -22,13 +21,20 @@
 .cart-grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 6rem;
     margin-bottom: 5rem;
 }
 
+@media screen and (min-width: 500px) {
+    .cart-grid {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+}
+
 @media screen and (min-width: 1080px) {
     .cart-grid {
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
         padding-left: 5%;
         padding-right: 5%;
     }
@@ -36,12 +42,16 @@
 
 .subtotal {
     font-size: 2.5rem;
+    text-align: center;
 }
 
 .cart-btns {
     display: flex;
     gap: 2rem;
     margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .content {
@@ -95,8 +105,8 @@
 }
 
 .card-img img {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
 }
 
@@ -110,4 +120,8 @@
 
 .empty a:hover {
     color: var(--accentColor);
+}
+
+.card .name {
+    text-align: center;
 }
