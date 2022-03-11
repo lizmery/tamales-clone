@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
+import { Badge } from '@material-ui/core'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
-import { BsCart2 } from 'react-icons/bs'
-import { BiChevronDown } from 'react-icons/bi'
+import { IoCartSharp } from 'react-icons/io5'
 import molcajete from '../../assets/molcajete6.png'
 import './Navbar.css';
 
@@ -53,7 +53,7 @@ const Navbar = ({ totalItems }) => {
                                 className="nav-link"
                                 onClick={() => setClick(false)}
                             >
-                                About <BiChevronDown />
+                                About
                             </NavLink>
                         </li>
                         <li className="nav-item">
@@ -79,24 +79,21 @@ const Navbar = ({ totalItems }) => {
                         </button> : null 
                     }
                 </div>
-                <div className="cart-icon">
-                    <Link
-                        exact
-                        to="/cart"
-                        aria-label="Show cart items"
-                    >
-                        <BsCart2 
-                            className={scroll || click ? "cart-btn" : "cart-btn transparent"}
-                        />
-                    </Link>
-                    {totalItems > 0 ? 
-                        <span className="cart-badge">
-                            {totalItems}
-                        </span> : null
-                    }
-                </div>
-                <div className="nav-icon" onClick={handleClick}>
-                    {click ? <RiCloseLine /> : <RiMenu3Line />}
+                <div className="mobile-icons">
+                    <div className="cart-icon">
+                        <Link
+                            exact
+                            to="/cart"
+                            aria-label="Show cart items"
+                        >
+                            <Badge badgeContent={totalItems} color="secondary">
+                                <IoCartSharp className="cart-btn" />
+                            </Badge>
+                        </Link>
+                    </div>
+                    <div className="nav-icon" onClick={handleClick}>
+                        {click ? <RiCloseLine /> : <RiMenu3Line />}
+                    </div>
                 </div>
             </nav>
         </header>
