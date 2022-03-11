@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { commerce } from './lib/commerce'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
@@ -7,12 +7,16 @@ import About from './pages/About/About';
 import Menu from './pages/Menu/Menu';
 import Footer from './components/Footer/Footer';
 import Cart from './components/Cart/Cart';
-import Checkout from './components/Checkout/Checkout'
+import Checkout from './components/Checkout/Checkout';
+import Confirmation from './components/Checkout/Confirmation';
 import './App.css'
+
 
 const App = () => {
   const [products, setProducts] = useState([])
   const [cart, setCart] = useState({})
+  const [orderInfo, setOrderInfo] = useState({})
+  const [orderError, setOrderError] = useState('')
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list()
@@ -46,6 +50,29 @@ const App = () => {
     const { cart } = await commerce.cart.empty()
 
     setCart(cart)
+  }
+
+  const refreshCart = async () => {
+    const newCartData = await commerce.cart.refresh()
+
+    setCart(newCartData)
+  }
+
+  const handleCheckout = async (checkoutId, orderData) => {
+    try {
+      // const incomingOrder = await commerce.checkout.capture(
+      //  checkoutId,
+      //  orderData
+      // )
+      setOrderInfo(orderData)
+
+      refreshCart()
+    } catch (error) {
+      setOrderError(
+        (error.data && error.data.error && error.data.error.message) ||
+        'Uh oh! An error has occurred.'
+      )
+    }
   }
 
   useEffect(() => {
@@ -87,7 +114,23 @@ const App = () => {
           <Route
             exact
             path="/checkout"
-            element={<Checkout cart={cart} />}
+            element={
+              <Checkout 
+                cart={cart}
+                handleCheckout={handleCheckout} 
+              />
+            }
+          />
+          <Route
+            exact
+            path="/confirmation"
+            element={
+              <Confirmation 
+                cart={cart}
+                orderInfo={orderInfo}
+                orderError={orderError}
+              />
+            }
           />
         </Routes>
         <Footer />

@@ -21,7 +21,7 @@ const Overview = () => {
                     </div>
                 </div>
             </Link>
-            <Link to="/">
+            <Link to="/cart">
                 <div className="item overview-other">
                     <h1 className="item-heading">Other</h1>
                     <div className="overlay">
