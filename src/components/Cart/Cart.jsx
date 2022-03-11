@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import CartItem from './CartItem/CartItem'
 import Button from '../Button'
@@ -16,21 +15,22 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
         <>
             <div className="cart-grid">
                 {cart.line_items.map((item) => (
-                    <div className="" key={item.id}>
-                        <CartItem
-                            item={item}
-                            onUpdateCartQty={handleUpdateCartQty}
-                            onRemoveFromCart={handleRemoveFromCart}
-                        />
-                    </div>
+                    <CartItem
+                        key={item.id}
+                        item={item}
+                        onUpdateCartQty={handleUpdateCartQty}
+                        onRemoveFromCart={handleRemoveFromCart}
+                    />
                 ))}
             </div>
-            <div className="">
-                <h4 className="subtotal">Subtotal: {cart.subtotal.formatted_with_symbol}</h4>
-                <div className="checkout-btns">
-                    <Button name="Empty Cart" secondary={true} onClick={handleEmptyCart} />
-                    <Link to='/checkout'><Button name="Checkout" /></Link>
-                </div>
+            <h4 className="subtotal">Subtotal: {cart.subtotal.formatted_with_symbol}</h4>
+            <div className="cart-btns">
+                <Button 
+                    name="Empty Cart" 
+                    secondary 
+                    onClick={handleEmptyCart} 
+                />
+                <Link to='/checkout'><Button name="Checkout" /></Link>
             </div>
         </>
     )
