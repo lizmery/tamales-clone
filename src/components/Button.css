@@ -16,3 +16,18 @@
 .secondary {
     background: var(--darkBrown);
 }
+
+.outline {
+    border: 1px solid var(--darkBrown);
+    background: transparent;
+    color: var(--darkBrown);
+}
+
+.outline:hover {
+    background: var(--darkBrown);
+    color: #fff;
+}
+
+.large {
+    width: 100%;
+}
