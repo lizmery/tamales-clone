@@ -1,97 +1,134 @@
-import React from 'react'
+import {
+    Grid,
+    Select,
+    MenuItem,
+    TextField,
+    InputLabel,
+    FormControl,
+  } from "@material-ui/core";
 
-const AddressForm = () => {
-    return (
-        <div className="address">
-            <div className="shipping">
-                <h1 className="address-heading">Shipping Address</h1>
-                <form className="checkout-form">
-                    <div className="row">
-                        <div className="col-50">
-                            <label for="first-name">First Name</label>
-                            <input type="text" name="first-name" required />
-                        </div>
-                        <div className="col-50">
-                            <label for="last-name">Last Name</label>
-                            <input type="text" name="last-name" required />
-                        </div>
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" required />
-                    </div>
-                    <div>
-                        <label for="address">Address</label>
-                        <input type="text" name="address" required />
-                    </div>
-                    <div className="row">
-                        <div className="col-25">
-                            <label for="country">Country</label>
-                            <select required>
-                                <option value="">Choose...</option>
-                                <option>United States</option>
-                            </select>
-                        </div>
-                        <div className="col-25">
-                            <label for="state">State</label>
-                            <select required>
-                                <option value="">Choose...</option>
-                                <option>California</option>
-                            </select>
-                        </div>
-                        <div className="col-25">
-                            <label for="zip">Zip</label>
-                            <input type="text" name="zip" required />
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <hr />
-            <div className="billing">
-                <h1 className="address-heading">Billing Address</h1>
-                <form className="checkout-form">
-                    <div className="row">
-                        <div className="col-50">
-                            <label for="first-name">First Name</label>
-                            <input type="text" name="first-name" required />
-                        </div>
-                        <div className="col-50">
-                            <label for="last-name">Last Name</label>
-                            <input type="text" name="last-name" required />
-                        </div>
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" required />
-                    </div>
-                    <div>
-                        <label for="address">Address</label>
-                        <input type="text" name="address" required />
-                    </div>
-                    <div className="row">
-                        <div className="col-25">
-                            <label for="country">Country</label>
-                            <select required>
-                                <option value="">Choose...</option>
-                                <option>United States</option>
-                            </select>
-                        </div>
-                        <div className="col-25">
-                            <label for="state">State</label>
-                            <select required>
-                                <option value="">Choose...</option>
-                                <option>California</option>
-                            </select>
-                        </div>
-                        <div className="col-25">
-                            <label for="zip">Zip</label>
-                            <input type="text" name="zip" required />
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    )
-}
+const AddressForm = ({
+    user = {},
+    handleChange,
+    handleSelectChange,
+}) => (
+    <form className="address">
+        <h5 className="checkout-subheading">Payment Info</h5>
+        <Grid container spacing={4}>
+            <Grid item xs={12} lg={6}>
+                <TextField
+                    required
+                    fullWidth
+                    id="first-name"
+                    name="firstName"
+                    label="First Name"
+                    value={user.firstName}
+                    onChange={handleChange}
+                    className="textfield"
+                />
+            </Grid>
+            <Grid item xs={12} lg={6}>
+                <TextField
+                    required
+                    fullWidth
+                    id="last-name"
+                    name="lastName"
+                    label="Last Name"
+                    value={user.lastName}
+                    onChange={handleChange}
+                />
+            </Grid>
+            <Grid item xs={12} lg={6}>
+                <TextField
+                    required
+                    fullWidth
+                    id="email"
+                    name="email"
+                    type="email"
+                    label="Email"
+                    value={user.email}
+                    onChange={handleChange}
+                />
+            </Grid>
+            <Grid item xs={12} lg={6}>
+                <TextField
+                    required
+                    fullWidth
+                    id="address"
+                    name="address"
+                    value={user.address}
+                    label="Address line 1"
+                    onChange={handleChange}
+                />
+            </Grid>
+            <Grid item xs={12} lg={6}>
+                <TextField
+                    required
+                    fullWidth
+                    id="city"
+                    name="city"
+                    label="City"
+                    value={user.city}
+                    onChange={handleChange}
+                />
+            </Grid>
+            <Grid item xs={12} lg={6}>
+                <TextField
+                    required
+                    fullWidth
+                    id="zip-code"
+                    name="zipCode"
+                    value={user.zipCode}
+                    onChange={handleChange}
+                    label="Zip Code"
+                />
+            </Grid>
+
+            <Grid item xs={12} lg={6}>
+                <FormControl fullWidth>
+                    <InputLabel id="shipping-country-select-label">
+                        Shipping Country
+                    </InputLabel>
+                    <Select
+                        required
+                        name="shippingCountry"
+                        id="shipping-country-select"
+                        value={user.shippingCountry.code || ""}
+                        labelId="shipping-country-select-label"
+                        onChange={(e) => handleSelectChange(e, "shippingCountries")}
+                    >
+                        {user.shippingCountries.map((country) => (
+                            <MenuItem key={country.code} value={country.code}>
+                                {country.name}
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
+            </Grid>
+    
+            <Grid item xs={12} lg={6}>
+                <FormControl fullWidth>
+                    <InputLabel id="shipping-options-select-label">
+                        Shipping Options
+                    </InputLabel>
+                    <Select
+                        required
+                        name="shippingOptions"
+                        value={user.shippingOption.id}
+                        id="shipping-options-select"
+                        labelId="shipping-options-select-label"
+                        onChange={(e) => handleSelectChange(e, "shippingOptions")}
+                    >
+                        {user.shippingOptions.map((option) => (
+                            <MenuItem key={option.id} value={option.id}>
+                                {`${option.description} - (${option.price.formatted_with_symbol})`}
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
+            </Grid>
+        </Grid>
+    </form>
+)
 
 export default AddressForm
