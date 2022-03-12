@@ -1,4 +1,4 @@
-# Tamales Shop (v.2) - *In Progress*
+# Tamales Shop (v.2)
 
 A mock e-commerce website that sells tamales. [View Live](https://tamales-clone.herokuapp.com/).
 
@@ -7,6 +7,7 @@ A mock e-commerce website that sells tamales. [View Live](https://tamales-clone.
 - React Slick
 - CSS3
 - CommerceJS
+- MaterialUI
 
 ## Features
 - Mobile-first approach
@@ -19,16 +20,23 @@ A mock e-commerce website that sells tamales. [View Live](https://tamales-clone.
 
 ## Screenshots
 ### Home Page
-![screencapture-localhost-3000-2022-02-17-13_16_28](https://user-images.githubusercontent.com/78451440/154572461-e9d87120-7bce-482d-bf83-8a600b3cdba8.png)
+![screencapture-tamales-clone-herokuapp-2022-03-11-14_36_17](https://user-images.githubusercontent.com/78451440/157984078-3d3a484f-d42c-4f49-abde-63de0eba44c0.png)
 
 ### About Page
-![screencapture-localhost-3002-about-2022-02-16-20_53_58](https://user-images.githubusercontent.com/78451440/154408367-1699366c-63c9-4304-b353-ff37eb541b2a.png)
+![screencapture-localhost-3000-about-2022-03-11-14_37_01](https://user-images.githubusercontent.com/78451440/157984122-c0e86a40-ef5a-41a0-b7cf-48068d46687a.png)
+
 
 ### Menu Page
-![screencapture-localhost-3002-menu-2022-02-16-20_55_30](https://user-images.githubusercontent.com/78451440/154408947-66697060-f473-4dfe-b285-6e0e291f3edf.png)
+![screencapture-localhost-3000-menu-2022-03-11-14_37_50](https://user-images.githubusercontent.com/78451440/157984169-4d7d0906-2fcd-4447-b304-f96c39abe47c.png)
 
-## *Currently Working On*
-- E-commerce features
+## Shopping Cart
+![screencapture-localhost-3000-cart-2022-03-11-14_38_23](https://user-images.githubusercontent.com/78451440/157984224-0d14cd65-7665-4977-a898-93bf05fd9fa8.png)
+
+## Checkout Page
+![screencapture-localhost-3000-checkout-2022-03-11-14_39_04](https://user-images.githubusercontent.com/78451440/157984256-d4bef063-deba-4a90-bd0a-485dfea8d4f7.png)
+
+
+## Future Implementations
 - Animations
 - Drop down menu (navbar)
 - Embedded google maps
