@@ -1,6 +1,6 @@
 # Tamales Shop (v.2)
 
-A mock e-commerce website that sells tamales. [View Live](https://tamales-clone.herokuapp.com/).
+A mock e-commerce website that sells tamales. [View Live](https://tamales-clone.vercel.app/).
 
 ## Technologies Used
 - ReactJS
